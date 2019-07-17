@@ -1,0 +1,24 @@
+<h2 class="text-center mt-5">Usuarios Actuales</h2>
+<div class="row d-flex justify-content-center">
+  <div class="col-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre de usuario</th>
+          <th scope="col">Contraseña</th>
+          <th scope="col">Rol de Usuario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of listaUsuarios.users">
+          <td>{{usuario.username}}</td>
+          <td>{{usuario.password}}</td>
+          <td>{{usuario.role}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <a routerLink="../"><button class="btn btn-primary btn-block">Regresar</button></a>
+
+
+  </div>
+</div>

@@ -1,36 +1,49 @@
-<div class="row">
-  <div class="col-3">
+<h1 class="text-center mt-2">Agregar Jugador</h1>
 
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+  <div class="row mt-5">
+    <div class="col-6">
+      <!-- <div class="form-group mt-5">
+        <label for="id">ID</label>
+        <input type="number" class="form-control" id="id" name="id" placeholder="ID" ngModel required>
+      </div> -->
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input type="number" class="form-control" id="edad" name="edad" placeholder="20" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan Perez" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="numero">Numero dorsal</label>
+        <input type="number" class="form-control" id="numero" name="numero" placeholder="10" ngModel required>
+      </div>
+
+      <input type="submit" class="btn btn-success btn-lg btn-block" value="Agregar">
+
+    </div>
+
+
+    <div class="col-6">
+      <div class="form-group">
+        <label for="peso">Peso</label>
+        <input type="number" class="form-control" id="peso" name="peso" placeholder="80" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="altura">Altura</label>
+        <input type="number" class="form-control" id="altura" name="altura" placeholder="180" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="posicion">Posición</label>
+        <select class="form-control" name="posicion" id="posicion" ngModel required>
+          <option value="portero">Portero</option>
+          <option value="defensa">Defensa</option>
+          <option value="medio">Medio</option>
+          <option value="delantero">Delantero</option>
+        </select>
+      </div>
+      <button routerLink="../" class="btn btn-primary btn-lg btn-block">Regresar</button>
+    </div>
   </div>
-  <div class="col-md-6 col-md-offset-5">
-    <div class="form-group mt-5">
-      <label for="id">ID</label>
-      <input type="number" class="form-control" id="id" aria-describedby="emailHelp" placeholder="ID">
-    </div>
-    <div class="form-group">
-      <label for="edad">Edad</label>
-      <input type="number" class="form-control" id="edad" aria-describedby="emailHelp" placeholder="20">
-    </div>
-    <div class="form-group">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Juan Perez">
-    </div>
-    <div class="form-group">
-      <label for="numero">Numero dorsal</label>
-      <input type="number" class="form-control" id="numero" aria-describedby="emailHelp" placeholder="10">
-    </div>
-    <div class="form-group">
-      <label for="peso">Peso</label>
-      <input type="number" class="form-control" id="peso" aria-describedby="emailHelp" placeholder="80">
-    </div>
-    <div class="form-group">
-      <label for="altura">Altura</label>
-      <input type="number" class="form-control" id="altura" aria-describedby="emailHelp" placeholder="180">
-    </div>
-    <div class="form-group">
-      <label for="posicion">Posición</label>
-      <input type="text" class="form-control" id="posicion" aria-describedby="emailHelp" placeholder="Delantero">
-    </div>
-    <button class="btn btn-primary">Agregar</button>
-  </div>
-</div>
+</form>

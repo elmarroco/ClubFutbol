@@ -1,0 +1,24 @@
+<h2 class="text-center mt-5">Masajistas Actuales</h2>
+<div class="row d-flex justify-content-center">
+  <div class="col-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Cedula Profesional</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let masajista of listaMasajistas.getListaMasajista()">
+          <td>{{masajista.getID()}}</td>
+          <td>{{masajista.getEdad()}}</td>
+          <td>{{masajista.getNombre()}}</td>
+          <td>{{masajista.getCedula()}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <a routerLink="../"><button class="btn btn-primary btn-block">Regresar</button></a>
+  </div>
+</div>

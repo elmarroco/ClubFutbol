@@ -1,0 +1,28 @@
+<h1 class="text-center mt-2">Agregar Masajista</h1>
+
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+  <div class="row mt-5">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input type="number" class="form-control" id="edad" name="edad" placeholder="20" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan Pérez" ngModel required>
+      </div>
+
+      <input type="submit" class="btn btn-success btn-lg btn-block" value="Agregar">
+
+    </div>
+
+
+    <div class="col-6">
+      <div class="form-group">
+        <label for="cedula">Cedula Profesional</label>
+        <input type="text" class="form-control" id="cedula" name="cedula" placeholder="20" ngModel required>
+      </div>
+      <button routerLink="../" class="btn btn-primary btn-lg btn-block">Regresar</button>
+    </div>
+  </div>
+</form>

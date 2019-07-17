@@ -1,0 +1,25 @@
+<h1 class="text-center mt-2">Agregar Partido</h1>
+
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+  <div class="row mt-5">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="rival">Rival</label>
+        <input type="text" class="form-control" id="rival" name="rival" placeholder="Santos FC" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="cancha">Cancha</label>
+        <input type="text" class="form-control" id="cancha" name="cancha" placeholder="Anfield Road" ngModel required>
+      </div>
+      <input type="submit" class="btn btn-success btn-lg btn-block" value="Agregar">
+    </div>
+
+    <div class="col-6">
+      <div class="form-group">
+        <label for="date">Fecha</label>
+        <input type="date" class="form-control" id="date" name="date" ngModel required>
+      </div>
+      <button routerLink="../" class="btn btn-primary btn-lg btn-block">Regresar</button>
+    </div>
+  </div>
+</form>

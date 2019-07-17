@@ -10,10 +10,19 @@ export class Miembro {
   getID(): number {
     return this.id;
   }
+  setID(id: number): void {
+    this.id = id;
+  }
   getEdad(): number {
     return this.edad;
   }
+  setEdad(edad: number): void {
+    this.edad = edad;
+  }
   getNombre(): string {
     return this.nombre;
+  }
+  setNombre(nombre: string): void {
+    this.nombre = nombre;
   }
 }

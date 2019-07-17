@@ -1,0 +1,18 @@
+<h1 class="text-center mt-2">Eliminar Jugador</h1>
+
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+  <div class="row mt-5 d-flex justify-content-center">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="jugador">Jugador a eliminar</label>
+        <select class="form-control" name="jugador" id="jugador" ngModel required>
+          <option *ngFor="let jugador of jugadores.getListaJugador()" value="{{ jugador.getID() }}">
+            {{ jugador.getNombre() }}
+          </option>
+        </select>
+      </div>
+      <input type="submit" class="btn btn-danger btn-lg btn-block" value="Eliminar">
+      <button routerLink="../" class="btn btn-primary btn-lg btn-block">Regresar</button>
+    </div>
+  </div>
+</form>

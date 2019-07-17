@@ -1,0 +1,30 @@
+<h2 class="text-center mt-5">Solicitudes Actuales</h2>
+<div class="row d-flex justify-content-center">
+  <div class="col-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Rival</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Estatus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let solicitud of listaSolicitudes.solicitudesBoletos">
+          <td>{{solicitud.idSolicitud}}</td>
+          <td>{{solicitud.nombreSolicitante}}</td>
+          <td>{{ listaPartidos.getPartido(solicitud.idPatrido).rival}}</td>
+          <td>{{listaPartidos.getPartido(solicitud.idPatrido).fecha | date}}</td>
+          <td>{{solicitud.cantidad}}</td>
+          <td>{{solicitud.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <a routerLink="../"><button class="btn btn-primary btn-block">Regresar</button></a>
+
+
+  </div>
+</div>
